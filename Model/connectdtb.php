@@ -1,7 +1,7 @@
 <?php
 function connectdb() {
     try {
-        $servername = "localhost";  
+        $servername = "3306";  
         $user = "root";         
         $pass = "Trantuananh07042005@";           
         $dbname = "system_user";
