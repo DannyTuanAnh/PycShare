@@ -20,14 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let username = document.getElementById("login").value.trim();
       let password = document.getElementById("passwordlogin").value.trim();
       if (username === "" || password === "") {
-        let toast = document.createElement("div");
-        toast.id = "toast";
-        toast.className = "toast show";
-        toast.innerHTML = "⚠️ Vui lòng nhập đầy đủ thông tin!";
-        document.body.appendChild(toast);
-        setTimeout(() => {
-          toast.remove();
-        }, 3000);
+        showToast("⚠️ Vui lòng nhập đầy đủ thông tin!");
         return;
       }
 
@@ -42,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
           encodeURIComponent(password)
       );
       xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
+        if (xhr.readyState === 4 && xhr.status === 200) {
           let response = JSON.parse(xhr.responseText);
           if (response.status === "success") {
             window.location.href = response.redirect;

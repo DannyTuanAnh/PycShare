@@ -207,7 +207,7 @@
     </header>
     <div class="body">
         <h1>ĐĂNG NHẬP</h1>
-        <form class="form__login">
+        <form class="form__login" method = "post">
             <div class="loginform">
                 <p>Tên đăng nhập</p>
                 <input type="text" name="username" id="login" placeholder="Tên đăng nhập..." />
