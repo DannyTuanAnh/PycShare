@@ -100,7 +100,7 @@
             </div>
             <div class="hasaccount">
                 <p>Bạn đã có tài khoản?</p>
-                <p><a href="./login.html">Đăng nhập</a></p>
+                <p><a href="./login.php">Đăng nhập</a></p>
             </div>
         </form>
     </div>
