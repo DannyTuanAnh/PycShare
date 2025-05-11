@@ -1,0 +1,81 @@
+Tài khoản admin
+	tk: admin
+	mk: 123
+Tài khoản người dùng
+
+1/
+Tài khoản: berbebong113
+Mật khẩu: ber123456
+
+2/
+Tài khoản: nguoidung1 
+Mật khẩu: 1
+
+3/
+Tài khoản: nguoidung2  
+Mật khẩu: 1
+
+4/
+Tài khoản: darkchuate
+Mật khẩu: 123456
+tài khoản này mật khẩu chưa đúng
+
+5/
+Tài khoản: darkaudam
+Mật khẩu: 96782354
+
+6/
+Tài khoản: phuongex
+Mật khẩu: koquaylai
+
+7/
+Tài khoản: phuongsuper
+Mật khẩu: super435
+
+8/
+Tài khoản: cyberhawk
+Mật khẩu: eagle123
+
+9/
+Tài khoản: bluewave     
+Mật khẩu: ocean2025 
+Tài khoản này chưa tạo
+
+10/ 
+Tài khoản: firefly      
+Mật khẩu: glow456
+
+11/
+Tài khoản: neonblade    
+Mật khẩu: shine789
+
+12/
+Tài khoản: shadowfox    
+Mật khẩu: dark123
+
+13/ 
+Tài khoản: silverstone 
+Mật khẩu: rock2025
+
+14/
+Tài khoản: goldenflare  
+Mật khẩu: sun456
+
+15/
+Tài khoản: dreamcatcher 
+Mật khẩu: star123
+
+16/
+Tài khoản: twilightwolf 
+Mật khẩu: night2025
+
+17/
+Tài khoản: test
+Mật khẩu: 1
+
+18/
+Tài khoản: test2
+Mật khẩu: 1
+
+
+

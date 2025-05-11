@@ -1,0 +1,107 @@
+.image-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.85;
+  z-index: 1000;
+}
+
+.image-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 960px;
+  background: white;
+  z-index: 1001;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.popup-content {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.popup-left {
+  flex: 1;
+}
+
+.popup-left img {
+  width: 100%;
+  max-height: 70vh; /* ảnh tối đa cao 70% chiều cao màn hình */
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.popup-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.image-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1rem;
+}
+
+.image-actions .action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  color: #063526;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.image-actions .action:hover {
+  color: #105e3c;
+}
+
+.image-actions .count {
+  font-weight: bold;
+}
+
+.popup-info h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.popup-comments input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.btn-comment {
+  margin-top: 10px;
+  background-color: var(--login);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-popup {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}

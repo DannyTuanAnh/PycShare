@@ -1,0 +1,166 @@
+/* ==== Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* ==== Layout ==== */
+.container-admin {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ==== Sidebar ==== */
+.sidebar {
+  width: 250px;
+  background-color: #033712;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.logo-admin img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navbar li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar li:hover,
+.navbar li.active {
+  background-color: #33553d;
+}
+
+/* ==== Main content ==== */
+.content-admin {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f8fafc;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #64748b;
+}
+
+/* ==== Stats Cards ==== */
+.stats {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+/* ==== Table Section ==== */
+.table-section {
+  margin-top: 40px;
+}
+
+.table-section h2 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #1e293b;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table-section th,
+.table-section td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-section th {
+  background-color: #f1f5f9;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.table-section td button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.table-section td button:hover {
+  background-color: #dc2626;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+/* ==== Footer ==== */
+.footer {
+  height: 60px;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  font-size: 14px;
+  margin-top: auto;
+}
