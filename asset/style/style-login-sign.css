@@ -1,0 +1,226 @@
+/* chung login + signup */
+.container-login-signup {
+  height: 100vh;
+}
+
+.container-form {
+  width: 43.75rem;
+  margin: 3.125rem auto;
+  align-items: center;
+  border: 0.0625rem solid var(--login);
+  border-radius: 0.5rem;
+  background-color: rgba(222, 199, 199, 0.05);
+}
+
+.container-form h1 {
+  font-size: 2rem;
+  color: var(--loginTitle);
+  font-family: var(--fontfamily);
+  font-weight: 700;
+  margin: 3.125rem 0;
+  text-align: center;
+}
+
+.form-login-signup {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-login-signup p {
+  font-family: "Montserrat", sans-serif;
+  color: var(--loginText);
+}
+
+#login::placeholder,
+#passwordlogin::placeholder,
+#username::placeholder,
+#email::placeholder,
+#password::placeholder {
+  font-family: var(--fontfamily);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-left: 1.25rem;
+  color: var(--loginPlaceHolder);
+}
+
+.container-form p {
+  margin-bottom: 0.3125rem;
+  font-family: var(--fontfamily);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.btn {
+  margin-top: 0.625rem;
+  width: 10rem;
+  height: 3.125rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--login);
+  font-size: 1.2rem;
+  font-family: var(--fontfamily);
+  font-weight: 700;
+  color: var(--loginText);
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-family: var(--fontfamily);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 0.625rem;
+  color: var(--loginPlaceHolder);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-container {
+  position: relative;
+}
+
+i {
+  color: var(--loginText);
+  border-radius: 0.5rem;
+  padding: 0.3125rem;
+  transition: 0.3s;
+}
+i:hover {
+  background-color: var(--maincolorlight);
+  transition: 0.3s;
+}
+
+/* Đăng nhập */
+.container-form-login {
+  height: 31.25rem;
+}
+
+#login,
+#passwordlogin {
+  width: 24.25rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--loginText);
+  margin-top: 0.3125rem;
+}
+
+#login {
+  margin-bottom: 1.875rem;
+}
+
+.btn-login {
+  margin-top: 1.875rem;
+}
+
+/* Đăng kí */
+.container-form-signup {
+  height: 38rem;
+  margin-top: 1.25rem;
+}
+
+.container-form-signup h1 {
+  margin: 1.875rem 0;
+}
+
+#username,
+#email,
+#password {
+  width: 24.25rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--loginText);
+}
+#username,
+#email {
+  margin-bottom: 0.9375rem;
+}
+
+.btn-signup {
+  margin-top: 0.625rem;
+}
+
+/* Mắt mở và đóng */
+.fa-eye,
+.fa-eye-slash {
+  color: var(--maincolorbold);
+  border-radius: 0.5rem;
+  padding: 0.3125rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.fa-eye:hover,
+.fa-eye-slash:hover {
+  background-color: var(--maincolorlight);
+  transition: 0.3s;
+}
+
+/* Container của password */
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.signupform--email {
+  margin-top: 0.9375rem;
+}
+
+/* checkbox */
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  width: 1.5625rem;
+  height: 1.25rem;
+  accent-color: var(--maincolorlight);
+}
+
+/* social */
+.otherssignup {
+  display: flex;
+  gap: 3.125rem;
+}
+
+.fa-brands {
+  padding-right: 0.3125rem;
+}
+
+.hasaccount {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.625rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #ffffff20;
+  padding: 0.625rem;
+}
+
+.hasaccount a {
+  color: var(--maincolorlight);
+}
+
+.hasaccount p {
+  font-size: 1rem;
+  color: var(--maincolorlight);
+}

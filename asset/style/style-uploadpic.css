@@ -1,0 +1,111 @@
+.container-form-upload-picture {
+  background-color: #074e0769;
+  border: solid 1px rgb(26, 81, 15);
+  padding: 20px;
+  width: 40%;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: none;
+}
+.form-upload-picture {
+  display: flex;
+}
+.left {
+  width: 50%;
+}
+.upload {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: rgba(255, 255, 255, 0.263);
+  margin: 20px;
+  border-radius: 10px;
+}
+.right input {
+  font-family: var(--fontfamily);
+  font-size: 1rem;
+  padding: 10px;
+  color: black;
+}
+
+#imageInput {
+  display: none; /* Ẩn input file */
+}
+.upload .btn-upload {
+  border-radius: 50%;
+  border: none;
+  width: 60px;
+  height: 60px;
+  font-size: 2.5rem;
+  background-color: #1f6521;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.upload p {
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+.upload-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-delete {
+  padding: 10px 20px;
+  background-color: #105013;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.right {
+  margin: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.right input {
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border: none;
+  width: 300px;
+  height: 500px;
+}
+.right #upload-descript {
+  height: 80px;
+}
+.right #upload-title,
+#upload-link {
+  height: 30px;
+}
+.right input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(31, 101, 33, 0.3);
+}
+.right p {
+  font-weight: bold;
+}
+h1 {
+  font-family: var(--fontfamily);
+  color: var(--maincolorbold);
+  font-weight: bolder;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  text-align: center;
+}
+/* Khi đang ở trang đó */
+.navbar-button.active {
+  background-color: #1f6521;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 8px;
+}
