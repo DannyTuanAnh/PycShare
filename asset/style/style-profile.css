@@ -18,7 +18,9 @@ h1 {
   align-items: flex-end;
   padding-bottom: 1rem;
 }
-
+p {
+  font-weight: bold;
+}
 .content-profile {
   flex: 1;
   padding: 2rem;
