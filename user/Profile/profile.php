@@ -36,7 +36,7 @@
         <header class="header">
             <!-- logo -->
             <div class="logo">
-                <img src="../../asset/img/Logo.svg" alt="Pycshare" />
+                <a href="../main.php"><img src="../../asset/img/Logo.svg" alt="Pycshare" /></a>
             </div>
             <!-- thanh tìm kiếm -->
             <div class="search-wrapper">
@@ -168,7 +168,11 @@
                 <div class="content-profile">
                     <div class="personal-infor">
                         <div class="avatar">
-                            <div class="avatar-personal"></div>
+                            <div class="avatar-personal">
+                                <img id="avatar-preview" src="../../asset/img/avatar_default.jpg" alt="" width="150">
+                            </div>
+                            <input type="file" id="avatar-input" accept="image/*" hidden />
+                            <button class="btn btn-custom" id="custom-button">Chọn ảnh đại diện</button>
                             <p>Số người theo dõi: ...</p>
                         </div>
                         <div class="infor">
@@ -181,13 +185,13 @@
                     </div>
 
                     <div class="other-option">
-                        <button class="other-option-button" id="article-saved">
+                        <button class="btn other-option-button" id="article-saved">
                             Bài viết đã lưu
                         </button>
-                        <button class="other-option-button" id="your-blog">
+                        <button class="btn other-option-button" id="your-blog">
                             Blog của tôi
                         </button>
-                        <button class="other-option-button" id="my-article">
+                        <button class="btn other-option-button" id="my-article">
                             Bài viết của bạn
                         </button>
                     </div>
@@ -202,11 +206,11 @@
         </div>
     </div>
 
-
     <script src="../../asset/javaScript/jquery.min.js"></script>
     <script src="../../asset/javaScript/common.js"></script>
     <script src="../../asset/javaScript/profile.js"></script>
     <script src="../../asset/javaScript/search.js"></script>
+    <script src="../../asset/javaScript/avatar.js"></script>
 </body>
 
 </html>
