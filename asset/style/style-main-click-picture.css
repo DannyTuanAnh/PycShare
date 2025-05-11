@@ -8,7 +8,10 @@
   opacity: 0.85;
   z-index: 1000;
 }
-
+.popup-info p {
+  padding: 0.7rem;
+  font-style: italic;
+}
 .image-popup {
   position: fixed;
   top: 50%;
