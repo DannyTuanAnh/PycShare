@@ -1,7 +1,8 @@
 $(document).ready(function () {
   // 1. Tải danh sách chủ đề từ PHP
+  const baseURL = window.location.origin + "/PycShare/";
   $.ajax({
-    url: "../../user/get_categories.php", // Điều chỉnh đường dẫn nếu cần
+    url: baseURL + "user/get_categories.php", // Điều chỉnh đường dẫn nếu cần
     method: "GET",
     dataType: "json",
     success: function (categories) {
