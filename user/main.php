@@ -144,7 +144,6 @@
             $table = @mysqli_query($server, "SELECT * from upload_picture") or die ("Không thể truy vấn dữ liệu");
             while($row = mysqli_fetch_array($table)) {
                 echo "<div class='gallery'>";
-                // echo "<img src='".$row['filePic']."' alt='natural' data-id='" . $row['idPic'] ."' class='gallery-img' />";
                 echo "<img src='".$row['filePic']."' alt='" . $row['TenPic'] . "'data-id='" . $row['idPic'] ."' class='gallery-img' />";//chỉnh
                 echo "</div>";
             }
