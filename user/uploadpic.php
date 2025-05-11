@@ -2,7 +2,7 @@
 <?php
     include "./handle_upload.php";
     if(!isset($_SESSION['username'])) {
-        header("Location: /user/Login_Signup/login.php");
+        header("Location: /PycShare/user/Login_Signup/login.php");
         exit();
     }
 ?>
