@@ -58,6 +58,7 @@ body {
   color: var(--loginText);
   cursor: pointer;
 }
+
 #login::placeholder,
 #passwordlogin::placeholder,
 #username::placeholder,

@@ -181,13 +181,13 @@
                     </div>
 
                     <div class="other-option">
-                        <button class="other-option-button" id="article-saved">
+                        <button class="btn other-option-button" id="article-saved">
                             Bài viết đã lưu
                         </button>
-                        <button class="other-option-button" id="your-blog">
+                        <button class="btn other-option-button" id="your-blog">
                             Blog của tôi
                         </button>
-                        <button class="other-option-button" id="my-article">
+                        <button class="btn other-option-button" id="my-article">
                             Bài viết của bạn
                         </button>
                     </div>
