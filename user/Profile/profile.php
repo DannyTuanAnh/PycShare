@@ -201,9 +201,6 @@
             <div id="settingContent" style="display: none"></div>
         </div>
     </div>
-    <!-- footer -->
-    <footer class="footer"></footer>
-
     <script src="../../asset/javaScript/jquery.min.js"></script>
     <script src="../../asset/javaScript/common.js"></script>
     <script src="../../asset/javaScript/profile.js"></script>
