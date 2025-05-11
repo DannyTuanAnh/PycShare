@@ -43,9 +43,23 @@ p {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: beige;
+  overflow: hidden; /* Giúp ảnh bo tròn không bị tràn ra ngoài */
   margin-bottom: 1rem;
+  border: 2px solid #ccc;
 }
+.btn-custom {
+  font-size: 0.75rem;
+  width: 10rem;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+}
+.avatar-personal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Giúp ảnh lấp đầy khung mà không méo */
+  display: block;
+}
+
 .infor {
   width: 840px;
   line-height: 30px;

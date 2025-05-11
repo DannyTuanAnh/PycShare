@@ -36,7 +36,7 @@
         <header class="header">
             <!-- logo -->
             <div class="logo">
-                <img src="../../asset/img/Logo.svg" alt="Pycshare" />
+                <a href="../main.php"><img src="../../asset/img/Logo.svg" alt="Pycshare" /></a>
             </div>
             <!-- thanh tìm kiếm -->
             <div class="search-wrapper">
@@ -168,9 +168,13 @@
                 <div class="content-profile">
                     <div class="personal-infor">
                         <div class="avatar">
-                            <div class="avatar-personal"></div>
+                            <div class="avatar-personal">
+                            <img id="avatar-preview" src="../../asset/img/avatar_default.jpg" alt="" width="150">
+                            </div>
+                            <input type="file" id="avatar-input" accept="image/*" hidden />
+                            <button class ="btn btn-custom" id="custom-button">Chọn ảnh đại diện</button>
                             <p>Số người theo dõi: ...</p>
-                        </div>
+                    </div>
                         <div class="infor">
                             <h1>THÔNG TIN CÁ NHÂN</h1>
                             <p id="user" data-id='<?php echo $row['id'] ?>'>Tên: <?php echo $row['user']; ?></p>
@@ -206,6 +210,7 @@
     <script src="../../asset/javaScript/common.js"></script>
     <script src="../../asset/javaScript/profile.js"></script>
     <script src="../../asset/javaScript/search.js"></script>
+    <script src="../../asset/javaScript/avatar.js"></script>
 </body>
 
 </html>
