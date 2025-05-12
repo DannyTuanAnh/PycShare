@@ -38,7 +38,7 @@ CREATE TABLE `avatar` (
 --
 
 INSERT INTO `avatar` (`id`, `idUser`, `AvatarFile`) VALUES
-(26, 8, 'uploadsAvatar/6.jpg');
+(26, 8, 'uploadsAvatar/21.jpg');
 
 --
 -- Chỉ mục cho các bảng đã đổ
