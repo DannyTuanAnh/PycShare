@@ -8,7 +8,6 @@
   $table = $server->query("select * from user where user = '".$_SESSION['username']."'") or die ("Không thể truy vấn dữ liệu");
   $row = mysqli_fetch_array($table);
 ?>
-
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -138,8 +137,6 @@
             <!-- Menu chức năng -->
             <div id="settingsMenu" style="display: none">
                 <ul>
-                    <li data-section="edit-profile">Chỉnh sửa trang cá nhân</li>
-                    <li data-section="security">Bảo mật</li>
                     <!-- Language trực tiếp -->
                     <li>
                         Ngôn ngữ
@@ -169,11 +166,10 @@
                     <div class="personal-infor">
                         <div class="avatar">
                             <div class="avatar-personal">
+                                <!-- SỬA NÀY NHÉ  -->
                             <img id="avatar-preview" src="../../asset/img/avatar_default.jpg" alt="" width="150">
-                            </div>
-                            <input type="file" id="avatar-input" accept="image/*" hidden />
-                            <button class ="btn btn-custom" id="custom-button">Chọn ảnh đại diện</button>
-                            <p>Số người theo dõi: ...</p>
+<!--========================================================================================================================================= -->
+                            </div> 
                     </div>
                         <div class="infor">
                             <h1>THÔNG TIN CÁ NHÂN</h1>
@@ -185,16 +181,12 @@
                     </div>
 
                     <div class="other-option">
-                        <!-- nút bài viết đã lưulưu -->
-                        <button class="btn other-option-button" id="article-saved">
-                            Bài viết đã lưu
-                        </button>
-                        <!-- nút bài viết đã lưu -->
+                
                         <button class="btn other-option-button" id="your-blog">
-                            Blog của tôi
+                            Blog
                         </button>
                         <button class="btn other-option-button" id="my-article">
-                            Bài viết của bạn
+                            Bài viết
                         </button>
                     </div>
 
@@ -212,7 +204,6 @@
     <script src="../../asset/javaScript/common.js"></script>
     <script src="../../asset/javaScript/profile.js"></script>
     <script src="../../asset/javaScript/search.js"></script>
-    <script src="../../asset/javaScript/avatar.js"></script>
 </body>
 
 </html>
