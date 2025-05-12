@@ -15,23 +15,57 @@
             $file_name = $_FILES['image']['name'];
             $file_tmp = $_FILES['image']['tmp_name'];
             
-            $upload_dir = "/PycShare/uploads/";
+            // $upload_dir = "/PycShare/uploads/";
+            
+
+            // if (!is_dir($upload_dir)) {
+            // mkdir($upload_dir, 0755, true); 
+            // }
+            // $file_path = $upload_dir . basename($file_name);
+            // if (move_uploaded_file($file_tmp, $file_path)) {
+            //     // Lưu đường dẫn file + title vào CSDL
+            //     $table = $server->prepare("insert into upload_picture (TenPic, filePic, idUser, MoTa) VALUES (?, ?, ?, ?)");
+            //     $table->bind_param("ssss", $tittle, $file_path, $user_id, $description);
+            //     if($table->execute()){
+            //         header ("Location: uploadpic.php");
+            //         $_SESSION['access'] = "Upload thành công!";
+            //         exit();
+            //     }
+            //     else {
+            //         header ("Location: uploadpic.php");
+            //         $_SESSION['error'] = "Lỗi khi lưu vào CSDL.";
+            //     }
+            //     $table->close();
+            // } else {
+            //     $_SESSION['error'] = "Lỗi khi lưu file.";
+            //     exit();
+            // }
+            // 1. Đường dẫn VẬT LÝ để lưu file
+            $upload_dir = __DIR__ . "/../uploads/"; // Đảm bảo đúng với cấu trúc thư mục
+
+            // 2. Tạo thư mục nếu chưa có
             if (!is_dir($upload_dir)) {
-            mkdir($upload_dir, 0755, true); 
+                mkdir($upload_dir, 0755, true);
             }
-            $file_path = $upload_dir . basename($file_name);
-            if (move_uploaded_file($file_tmp, $file_path)) {
-                // Lưu đường dẫn file + title vào CSDL
-                $table = $server->prepare("insert into upload_picture (TenPic, filePic, idUser, MoTa) VALUES (?, ?, ?, ?)");
-                $table->bind_param("ssss", $tittle, $file_path, $user_id, $description);
-                if($table->execute()){
-                    header ("Location: uploadpic.php");
+
+            // 3. Đường dẫn vật lý đầy đủ để lưu file
+            $save_path = $upload_dir . basename($file_name);
+
+            // 4. Đường dẫn WEB để lưu vào CSDL
+            $web_path = "/PycShare/uploads/" . basename($file_name);
+
+            // 5. Di chuyển file
+            if (move_uploaded_file($file_tmp, $save_path)) {
+                // 6. Lưu $web_path vào CSDL
+                $table = $server->prepare("INSERT INTO upload_picture (TenPic, filePic, idUser, MoTa) VALUES (?, ?, ?, ?)");
+                $table->bind_param("ssss", $tittle, $web_path, $user_id, $description);
+                if ($table->execute()) {
                     $_SESSION['access'] = "Upload thành công!";
+                    header("Location: uploadpic.php");
                     exit();
-                }
-                else {
-                    header ("Location: uploadpic.php");
+                } else {
                     $_SESSION['error'] = "Lỗi khi lưu vào CSDL.";
+                    header("Location: uploadpic.php");
                 }
                 $table->close();
             } else {
