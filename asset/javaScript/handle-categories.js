@@ -26,10 +26,9 @@ $(document).ready(function () {
 
   $(document).on("click", ".menu-item", function () {
     const tenpic = $(this).data("tenpic");
-
     // Gọi Ajax để lấy HTML mới
     $.ajax({
-      url: "../../user/get_images_by_tenpic.php",
+      url: baseURL + "user/get_images_by_tenpic.php",
       method: "GET",
       data: { TenPic: tenpic },
       success: function (html) {

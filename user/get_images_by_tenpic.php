@@ -17,8 +17,8 @@ $html = '';
 while ($row = $result->fetch_assoc()) {
     $html .= '
     <div class="gallery">
-        <img src="' . htmlspecialchars($row['filePic']) . '" 
-             alt="' . htmlspecialchars($row['TenPic']) . '" 
+        <img src="' .($row['filePic']) . '" 
+             alt="' .($row['TenPic']) . '" 
              data-id="' . $row['idPic'] . '" 
              class="gallery-img" />
     </div>';
