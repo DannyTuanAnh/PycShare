@@ -171,11 +171,13 @@
                     </span>
                 </div>
                 <div class="popup-info">
-                    <h2 class="popup-title">Tiêu đề ảnh:
+                    <h2 class="popup-title">
                     </h2>
-                    <p class="popup-author">Tên tác giả</p>
-                    <p class="popup-date">Ngày đăng tải</p>
-                    <p class="popup-desc">Mô tả của tác giả</p>
+                    <a href="main.php?author=">
+                        <p class="popup-author"></p>
+                    </a>
+                    <p class="popup-date"></p>
+                    <p class="popup-desc"></p>
                 </div>
                 <div class="popup-comments">
                     <p class="popup-comments-count">6 nhận xét</p>
