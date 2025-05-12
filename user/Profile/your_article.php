@@ -1,10 +1,11 @@
 <?php
     session_start();
     if(!isset($_SESSION['username'])) {
-        header("Location: /PycShare/user/Login_Signup/login.php");
+        header("Location: ../Login_Signup/login.php");
         exit();
     }
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -37,7 +38,7 @@
         $table = @mysqli_query($server,"select * from upload_picture where idUser = ".$idUser) or die ("Không thể truy vấn dữ liệu");
         while($row = mysqli_fetch_array($table)) {
             echo "<div class='gallery' >";
-            echo "<img src='".$row['filePic']."' alt='natural' data-id='" . $row['idPic'] ."' class='gallery-img'  />";
+            echo "<img src='../".$row['filePic']."' alt='natural' data-id='" . $row['idPic'] ."' class='gallery-img'  />";
             echo "</div>";
         }
         ?>

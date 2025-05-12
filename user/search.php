@@ -101,12 +101,9 @@
             </button>
 
             <!-- Khung menu chủ đề -->
-            <div id="menuPanel" style="display: none;">
-                <button class="menu-item">THIÊN NHIÊN</button>
-                <button class="menu-item">ANIME</button>
-                <button class="menu-item">HÌNH NỀN MÁY TÍNH</button>
-                <button class="menu-item">ẢNH NGHỆ THUẬT</button>
-            </div>
+            <div id="menuPanel" style="display: none;"></div>
+            <!-- Nơi hiển thị ảnh -->
+            <div id="imageContainer" style="margin-top: 20px;"></div>
 
         </div>
         <!-- Khung thông báo -->
@@ -204,6 +201,7 @@
     <script src="../asset/javaScript/common.js"></script>
     <script src="../asset/javaScript/click-picture.js"></script>
     <script src="../asset/javaScript/search.js"></script>
+    <script src="../asset/javaScript/handle-categories.js"></script>
 </body>
 
 </html>
