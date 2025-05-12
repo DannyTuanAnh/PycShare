@@ -1,26 +1,40 @@
-$(document).ready(function () {
-  //code này dùng để thêm active đánh dấu 1 nút mới được bấm
+//code này dùng để thêm active đánh dấu 1 nút mới được bấm
+document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop();
-  const buttons = $(".navbar-button");
+  const buttons = document.querySelectorAll(".navbar-button");
 
-  buttons.each(function () {
-    const href = $(this).attr("href");
+  buttons.forEach((btn) => {
+    const href = btn.getAttribute("href");
 
     if (href && href.includes(currentPage)) {
-      $(this).addClass("active");
-      $(this).attr("href", "javascript:location.reload()");
+      btn.classList.add("active");
+      btn.setAttribute("href", "javascript:location.reload()");
     }
 
-    $(this).click(function () {
-      buttons.removeClass("active");
-      $(this).addClass("active");
+    btn.addEventListener("click", function () {
+      buttons.forEach((b) => b.classList.remove("active"));
+      this.classList.add("active");
     });
   });
+});
+
+$(document).ready(function () {
   //code thông báo
   $("#notificationButton").click(function (event) {
     event.stopPropagation(); // Không lan ra ngoài
     $(".notification-panel").slideToggle(300);
   });
+
+  // Click bên ngoài sẽ đóng bảng thông báo
+  $(document).click(function (event) {
+    if (
+      !$(event.target).closest(".notification-panel, #notificationButton")
+        .length
+    ) {
+      $(".notification-panel").slideUp(300);
+    }
+  });
+
   // code menu
   $("#menuButton").click(function (event) {
     event.stopPropagation();
@@ -31,15 +45,6 @@ $(document).ready(function () {
   $(document).click(function (event) {
     if (!$(event.target).closest("#menuPanel, #menuButton").length) {
       $("#menuPanel").slideUp(300);
-    }
-  });
-  // Click bên ngoài sẽ đóng bảng thông báo
-  $(document).click(function (event) {
-    if (
-      !$(event.target).closest(".notification-panel, #notificationButton")
-        .length
-    ) {
-      $(".notification-panel").slideUp(300);
     }
   });
 });

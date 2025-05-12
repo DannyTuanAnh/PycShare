@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  const baseURL = window.location.origin + "/PycShare/";
   // 1. Tải danh sách chủ đề từ PHP
+  const baseURL = window.location.origin + "/PycShare/";
   $.ajax({
     url: baseURL + "user/get_categories.php", // Điều chỉnh đường dẫn nếu cần
     method: "GET",
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     // Gọi Ajax để lấy HTML mới
     $.ajax({
-      url: baseURL + "user/get_images_by_tenpic.php",
+      url: "../../user/get_images_by_tenpic.php",
       method: "GET",
       data: { TenPic: tenpic },
       success: function (html) {
