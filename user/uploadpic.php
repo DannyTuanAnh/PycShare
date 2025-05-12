@@ -2,14 +2,14 @@
 <?php
     include "./handle_upload.php";
     if(!isset($_SESSION['username'])) {
-        header("Location: /user/Login_Signup/login.php");
+        header("Location: /PycShare/user/Login_Signup/login.php");
         exit();
     }
 ?>
 
 <?php
     if(isset($_SESSION['error'])) {
-        echo "<script>document.addEventListener('DOMContentLoaded', function() { showSuccess('" . $_SESSION['error'] . "'); });</script>";
+        echo "<script>document.addEventListener('DOMContentLoaded', function() { showToast('" . $_SESSION['error'] . "'); });</script>";
         unset($_SESSION['error']);
     }
     if(isset($_SESSION['access'])) {
@@ -170,7 +170,8 @@
     <script src="../asset/javaScript/common.js"></script>
     <script src="../asset/javaScript/uploadPicture.js"></script>
     <script src="../asset/javaScript/search.js"></script>
-    <!-- <script src="../asset/javaScript/login_signup.js"></script> -->
+    <script src="../asset/javaScript/login_signup.js"></script>
+
 </body>
 
 </html>

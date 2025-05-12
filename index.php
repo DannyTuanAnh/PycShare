@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../asset/style/reset.css" />
-    <link rel="stylesheet" href="../asset/style/style.css" />
+    <link rel="stylesheet" href="./asset/style/reset.css" />
+    <link rel="stylesheet" href="./asset/style/style.css" />
 
-    <link rel="stylesheet" href="../asset/style/style-main-click-picture.css" />
+    <link rel="stylesheet" href="./asset/style/style-main-click-picture.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,14 +49,14 @@
     <header class=" header">
         <!-- logo -->
         <div class="logo">
-            <a href="./index.php"><img src="../asset/img/Logo.svg" alt="Pycshare" /></a>
+            <a href="./index.php"><img src="./asset/img/Logo.svg" alt="Pycshare" /></a>
         </div>
         <!-- menu -->
         <div class="navbar">
             <!-- đăng nhập & đăng ký -->
             <div class="auth-buttons">
-                <a href="./Login_Signup/login.php">Đăng nhập</a>
-                <a href="./Login_Signup/signup.php">Đăng ký</a>
+                <a href="./user/Login_Signup/login.php">Đăng nhập</a>
+                <a href="./user/Login_Signup/signup.php">Đăng ký</a>
             </div>
         </div>
     </header>
@@ -67,7 +67,7 @@
             $table = @mysqli_query($server, "select * from upload_picture") or die ("Không thể truy vấn dữ liệu");
             while($row = mysqli_fetch_array($table)) {
                 echo "<div class='gallery'>";
-                echo "<img src='".$row['filePic']."' alt='natural' data-id='" . $row['idPic'] ."' class='gallery-img' />";
+                echo "<img src='".$row['filePic']."' alt='". $row['TenPic']."' data-id='" . $row['idPic'] ."' class='gallery-img' />";
                 echo "</div>";
             }
         ?>
@@ -100,9 +100,9 @@
     <!-- footer -->
     <footer class="footer"></footer>
     <!-- js -->
-    <script src="../asset/javaScript/common.js"></script>
-    <script src="../asset/javaScript/jquery.min.js"></script>
-    <script src="../asset/javaScript/click-picture.js"></script>
+    <script src="./asset/javaScript/common.js"></script>
+    <script src="./asset/javaScript/jquery.min.js"></script>
+    <script src="./asset/javaScript/click-picture.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     session_start();
     // Kiểm tra xem người dùng đã đăng nhập chưa
     if(!isset($_SESSION['admin'])){
-        header("Location:  /user/Login_Signup/login.php");
+        header("Location:  /PycShare/user/Login_Signup/login.php");
         exit();
     }
     $server = @mysqli_connect("localhost:3307", "root", "", "system_user") or die ("Không kết nối được máy chủ");

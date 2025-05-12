@@ -1,11 +1,12 @@
 $(document).ready(function () {
+  const baseURL = window.location.origin + "/PycShare/";
   $(".gallery-img").click(function () {
     const imgSrc = $(this).attr("src");
     const imgID = $(this).data("id");
 
     $(".image-popup, .image-popup-overlay").fadeIn();
     $.ajax({
-      url: "../user/get_image_info.php",
+      url: baseURL + "user/get_image_info.php",
       type: "GET",
       data: { id: imgID },
       dataType: "json",

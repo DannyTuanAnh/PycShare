@@ -1,7 +1,8 @@
 $(document).ready(function () {
   // 1. Tải danh sách chủ đề từ PHP
+  const baseURL = window.location.origin + "/PycShare/";
   $.ajax({
-    url: "../../user/get_categories.php", // Điều chỉnh đường dẫn nếu cần
+    url: baseURL + "user/get_categories.php", // Điều chỉnh đường dẫn nếu cần
     method: "GET",
     dataType: "json",
     success: function (categories) {
@@ -16,8 +17,6 @@ $(document).ready(function () {
           `<button class="menu-item" data-tenpic="${cat}">${cat}</button>`
         );
       });
-
-      $("#menuPanel").show(); // Hiển thị menu
     },
     error: function (xhr, status, error) {
       console.error("Lỗi tải chủ đề:", error);
@@ -28,12 +27,9 @@ $(document).ready(function () {
   $(document).on("click", ".menu-item", function () {
     const tenpic = $(this).data("tenpic");
 
-    // Hiển thị loading
-    $(".main-content").html('<div class="loading">Đang tải ảnh...</div>');
-
     // Gọi Ajax để lấy HTML mới
     $.ajax({
-      url: "/PycShare/user/get_images_by_tenpic.php",
+      url: "../../user/get_images_by_tenpic.php",
       method: "GET",
       data: { TenPic: tenpic },
       success: function (html) {

@@ -1,12 +1,22 @@
 <?php
-    session_start();
+    include "upload_avatar.php";
     if(!isset($_SESSION['username'])) {
-        header("Location: /user/Login_Signup/login.php");
+        header("Location: /PycShare/user/Login_Signup/login.php");
         exit();
+    }
+    if(isset($_SESSION['error'])) {
+        echo "<script>document.addEventListener('DOMContentLoaded', function() { showToast('" . $_SESSION['error'] . "'); });</script>";
+        unset($_SESSION['error']);
+    }
+    if(isset($_SESSION['complete'])) {
+        echo "<script>document.addEventListener('DOMContentLoaded', function() { showSuccess('" . $_SESSION['complete'] . "'); });</script>";
+        unset($_SESSION['complete']);
     }
   $server = @mysqli_connect("localhost:3307", "root", "", "system_user") or die ("Không kết nối được máy chủ");
   $table = $server->query("select * from user where user = '".$_SESSION['username']."'") or die ("Không thể truy vấn dữ liệu");
   $row = mysqli_fetch_array($table);
+  $table2 = $server->query("select * from avatar where idUser = $user_id");
+  $row2 = mysqli_fetch_array($table2);
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +46,7 @@
         <header class="header">
             <!-- logo -->
             <div class="logo">
-                <img src="../../asset/img/Logo.svg" alt="Pycshare" />
+                <a href="../main.php"><img src="../../asset/img/Logo.svg" alt="Pycshare" /></a>
             </div>
             <!-- thanh tìm kiếm -->
             <div class="search-wrapper">
@@ -168,7 +178,16 @@
                 <div class="content-profile">
                     <div class="personal-infor">
                         <div class="avatar">
-                            <div class="avatar-personal"></div>
+                            <div class="avatar-personal">
+                                <img id="avatar-preview"
+                                    src="<?php echo !empty($row2['AvatarFile']) ? $row2['AvatarFile'] : '../../asset/img/avatar_default.jpg'; ?>"
+                                    alt="avatar" width="150">
+                            </div>
+                            <form id="uploadForm" action="profile.php" method="post" enctype="multipart/form-data">
+                                <input type="file" name="avatar" id="avatar-input" accept="image/*" hidden />
+                                <button type="button" class="btn btn-custom" id="custom-button">Chọn ảnh đại
+                                    diện</button>
+                            </form>
                             <p>Số người theo dõi: ...</p>
                         </div>
                         <div class="infor">
@@ -181,13 +200,13 @@
                     </div>
 
                     <div class="other-option">
-                        <button class="other-option-button" id="article-saved">
+                        <button class="btn other-option-button" id="article-saved">
                             Bài viết đã lưu
                         </button>
-                        <button class="other-option-button" id="your-blog">
+                        <button class="btn other-option-button" id="your-blog">
                             Blog của tôi
                         </button>
-                        <button class="other-option-button" id="my-article">
+                        <button class="btn other-option-button" id="my-article">
                             Bài viết của bạn
                         </button>
                     </div>
@@ -201,13 +220,13 @@
             <div id="settingContent" style="display: none"></div>
         </div>
     </div>
-    <!-- footer -->
-    <footer class="footer"></footer>
-
     <script src="../../asset/javaScript/jquery.min.js"></script>
     <script src="../../asset/javaScript/common.js"></script>
     <script src="../../asset/javaScript/profile.js"></script>
     <script src="../../asset/javaScript/search.js"></script>
+    <script src="../../asset/javaScript/avatar.js"></script>
+    <script src="../asset/javaScript/login_signup.js"></script>
+    <script src="../asset/javaScript/uploadPicture.js"></script>
 </body>
 
 </html>
