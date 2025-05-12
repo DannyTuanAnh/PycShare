@@ -5,11 +5,9 @@ $(document).ready(function () {
     const imgID = $(this).data("id");
 
     $(".image-popup, .image-popup-overlay").fadeIn();
-    $(".popup-img").attr("src", imgSrc).attr("data-id", pictureId);
-    $(".action.download").attr("data-id", pictureId);
 
     $.ajax({
-      url: baseURL + "user/get_image_info.php",
+      url: "/PycShare/user/get_image_info.php",
       type: "GET",
       data: { id: imgID },
       dataType: "json",

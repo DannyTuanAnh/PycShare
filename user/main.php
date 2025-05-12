@@ -198,6 +198,29 @@
     <script src="../asset/javaScript/click-picture.js"></script>
     <script src="../asset/javaScript/search.js"></script>
     <script src="../asset/javaScript/handle-categories.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script>
+    $(document).ready(function() {
+        $('.bookmark-btn').click(function() {
+            const icon = $(this);
+            const imageId = icon.data('image-id');
+            $.ajax({
+                url: 'save_image.php',
+                type: 'POST',
+                data: {
+                    image_id: imageId
+                },
+                success: function(response) {
+                    if (response === 'saved') {
+                        icon.removeClass('fa-regular').addClass('fa-solid');
+                    } else if (response === 'removed') {
+                        icon.removeClass('fa-solid').addClass('fa-regular');
+                    }
+                }
+            });
+        });
+    });
+    </script> -->
 </body>
 
 </html>
