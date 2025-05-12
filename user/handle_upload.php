@@ -31,16 +31,17 @@
                 }
                 else {
                     header ("Location: uploadpic.php");
-                    $_SESSION['error'] = "Lỗi khi lưu vào CSDL.";
+                    $_SESSION['errorPic'] = "Lỗi khi lưu vào CSDL.";
+                    exit();
                 }
                 $table->close();
             } else {
-                $_SESSION['error'] = "Lỗi khi lưu file.";
+                $_SESSION['errorPic'] = "Lỗi khi lưu file.";
                 exit();
             }
         }
         else {
-            echo "Không có file được tải lên.";
+            $_SESSION['errorPic'] = "Không có file được tải lên.";
         }
     }
 ?>

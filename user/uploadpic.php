@@ -8,9 +8,9 @@
 ?>
 
 <?php
-    if(isset($_SESSION['error'])) {
+    if(isset($_SESSION['errorPic'])) {
         echo "<script>document.addEventListener('DOMContentLoaded', function() { showToast('" . $_SESSION['error'] . "'); });</script>";
-        unset($_SESSION['error']);
+        unset($_SESSION['errorPic']);
     }
     if(isset($_SESSION['access'])) {
         echo "<script>document.addEventListener('DOMContentLoaded', function() { showSuccess('" . $_SESSION['access'] . "'); });</script>";
