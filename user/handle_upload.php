@@ -15,7 +15,7 @@
             $file_name = $_FILES['image']['name'];
             $file_tmp = $_FILES['image']['tmp_name'];
             
-            $upload_dir = "/PycShare/uploads/";
+            $upload_dir = "uploads/";
             if (!is_dir($upload_dir)) {
             mkdir($upload_dir, 0755, true); 
             }
