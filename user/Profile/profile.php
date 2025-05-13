@@ -1,7 +1,7 @@
 <?php
     include "upload_avatar.php";
     if(!isset($_SESSION['username'])) {
-        header("Location: /PycShare/user/Login_Signup/login.php");
+        header("Location: ../Login_Signup/login.php");
         exit();
     }
     if(isset($_SESSION['error'])) {
@@ -46,7 +46,7 @@
         <header class="header">
             <!-- logo -->
             <div class="logo">
-                <a href="../main.php"><img src="../../asset/img/Logo.svg" alt="Pycshare" /></a>
+                <img src="../../asset/img/Logo.svg" alt="Pycshare" />
             </div>
             <!-- thanh tìm kiếm -->
             <div class="search-wrapper">

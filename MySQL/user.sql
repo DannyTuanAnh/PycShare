@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1:3307
--- Thời gian đã tạo: Th4 22, 2025 lúc 06:52 AM
+-- Máy chủ: localhost:3307
+-- Thời gian đã tạo: Th5 12, 2025 lúc 06:31 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -45,7 +45,6 @@ INSERT INTO `user` (`id`, `user`, `pass`, `role`, `email`) VALUES
 (9, 'nguoidung2', '$2y$10$nhnHDa5TsDWK705lpO0dW.mwQw4D5cSICQSYCko6gAIOE6yaOSRkK', 0, 'nguoidung2@gmail.com'),
 (11, 'berbebong113', '$2y$10$d8AGNdFpeQc4ZPAIG4Jwz.g1dY/cvb7wgzdXoJ8CRa.r/KNxWJhZO', 0, 'ber123@gmail.com'),
 (12, 'darkchuate', '$2y$10$01MPlJ6nFeqfEvbcGYSN4.0hZcXkQAGIi0eDdemxisdYDheLVbt0O', 0, 'dark@gmail.com'),
-(13, 'darkaudam', '$2y$10$W5U4CHLaQNYNQ6/UQKNJv.B4QheReSxiPAUa9j4zvt/JeSUsMZSOy', 0, 'darkad@gmail.com'),
 (14, 'phuongex', '$2y$10$Jm1yyVV1ZAUnsYzr915si.EWwObsC4lsPeIRHrAr6lYkiwyF5.3S.', 0, 'phuongbest@gmail.com'),
 (15, 'phuongsuper', '$2y$10$9Iv9CVVtnAmO9fdi1HD6AujPrfBjZ8.aP3OkGFtuOgGlLvV/A4r/2', 0, 'phuongsp@gmail.com'),
 (16, 'cyberhawk', '$2y$10$Gf.WEUJMMt.QEG9VLJ7tA.RtukJvqTG1HcNVjgI1dSkw9k.hOU4VW', 0, 'cyber@gmail.com'),
@@ -56,7 +55,10 @@ INSERT INTO `user` (`id`, `user`, `pass`, `role`, `email`) VALUES
 (21, 'goldenflare', '$2y$10$vpAwUxsd7zBwT6C.LnS18uVlTmApRycvBHMR926kDi4LrAb/s0EXy', 0, 'sunst@gmail.com'),
 (22, 'dreamcatcher', '$2y$10$j1ZJkUlSt8QGMt0inMMlFufzz2b/zU1rnbC82E1Qt5uDrHwSeShPS', 0, 'drcatch@gmail.com'),
 (23, 'twilightwolf', '$2y$10$y9rRFrqSgC/bICbanqFyB.o2/Aw6p9rR8jtLcWqQKLmXBSK.SxsPC', 0, 'twlight@gmail.com'),
-(25, 'test', '$2y$10$stERF.TapoLuZEWAiuLzVORs4Yl5krqmb85iXGDkgPMpHYmJYBKfK', 0, 'test@gmail.com');
+(25, 'test', '$2y$10$stERF.TapoLuZEWAiuLzVORs4Yl5krqmb85iXGDkgPMpHYmJYBKfK', 0, 'test@gmail.com'),
+(26, 'conmeokiugaugau', '$2y$10$gefK4ZxNbYkSDW2zdpWmPOO8iXQeSfQPIxU3xoRbhW4P.q4MS43I.', 0, 'conmeo@gmail.com'),
+(27, 'conmeoeo', '$2y$10$J5Zh.9OYxsX6gO073odGiebx8.PHV8PtDOdYsaeb5v39YL5JSNQpi', 0, 'qưee@gmail.com'),
+(28, 'tuananhquanhabo', '$2y$10$7rw7T4JUuoXGFTLLuxcKIu3RU1BdxWtikAfXY0FTn55vP3p/RWGru', 0, 'tuananhquanhabo@gmail.com');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -76,7 +78,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

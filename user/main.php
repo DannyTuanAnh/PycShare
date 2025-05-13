@@ -1,10 +1,11 @@
 <?php
     session_start();
     if(!isset($_SESSION['username'])) {
-        header("Location: /PycShare/user/Login_Signup/login.php");
+        header("Location: ./Login_Signup/login.php");
         exit();
     }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -144,7 +145,7 @@
             $table = @mysqli_query($server, "SELECT * from upload_picture") or die ("Không thể truy vấn dữ liệu");
             while($row = mysqli_fetch_array($table)) {
                 echo "<div class='gallery'>";
-                echo "<img src='".$row['filePic']."' alt='" . $row['TenPic'] . "'data-id='" . $row['idPic'] ."' class='gallery-img' />";//chỉnh
+                echo "<img src='./".$row['filePic']."' alt='" . $row['TenPic'] . "'data-id='" . $row['idPic'] ."' class='gallery-img' />";//chỉnh
                 echo "</div>";
             }
         ?>
@@ -160,8 +161,8 @@
             <div class="popup-right">
                 <div class="image-actions">
                     <span class="action like">
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="count">140</span>
+                        <i class="fa-regular fa-heart" data-id=""></i>
+                        <span class="count"></span>
                     </span>
                     <span class="action download">
                         <i class="fa-solid fa-download"></i>
@@ -171,11 +172,13 @@
                     </span>
                 </div>
                 <div class="popup-info">
-                    <h2 class="popup-title">Tiêu đề ảnh:
+                    <h2 class="popup-title">
                     </h2>
-                    <p class="popup-author">Tên tác giả</p>
-                    <p class="popup-date">Ngày đăng tải</p>
-                    <p class="popup-desc">Mô tả của tác giả</p>
+                    <a href="main.php?author=">
+                        <p class="popup-author"></p>
+                    </a>
+                    <p class="popup-date"></p>
+                    <p class="popup-desc"></p>
                 </div>
                 <div class="popup-comments">
                     <p class="popup-comments-count">6 nhận xét</p>
@@ -195,6 +198,29 @@
     <script src="../asset/javaScript/click-picture.js"></script>
     <script src="../asset/javaScript/search.js"></script>
     <script src="../asset/javaScript/handle-categories.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script>
+    $(document).ready(function() {
+        $('.bookmark-btn').click(function() {
+            const icon = $(this);
+            const imageId = icon.data('image-id');
+            $.ajax({
+                url: 'save_image.php',
+                type: 'POST',
+                data: {
+                    image_id: imageId
+                },
+                success: function(response) {
+                    if (response === 'saved') {
+                        icon.removeClass('fa-regular').addClass('fa-solid');
+                    } else if (response === 'removed') {
+                        icon.removeClass('fa-solid').addClass('fa-regular');
+                    }
+                }
+            });
+        });
+    });
+    </script> -->
 </body>
 
 </html>
