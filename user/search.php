@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $server = @mysqli_connect("localhost:3307", "root", "", "system_user") or die ("Không kết nối được máy chủ");
     if($_SERVER['REQUEST_METHOD'] == 'GET') {
         $search = $_GET['searchInput'];
@@ -144,7 +145,7 @@
         if ($result->num_rows > 0) {
             while($row = mysqli_fetch_array($result)) {
                 echo "<div class='gallery'>";
-                echo "<img src='".$row['filePic']."' alt='natural' data-id='" . $row['idPic'] ."' class='gallery-img' />";
+                echo "<img src='".$row['filePic']."' alt='" . $row['TenPic'] . "'data-id='" . $row['idPic'] ."' class='gallery-img' />";
                 echo "</div>";
             }
         }
@@ -168,8 +169,8 @@
             <div class="popup-right">
                 <div class="image-actions">
                     <span class="action like">
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="count">140</span>
+                        <i class="fa-regular fa-heart popup-heart" data-id=""></i>
+                        <span class="count"></span>
                     </span>
                     <span class="action download">
                         <i class="fa-solid fa-download"></i>
@@ -193,6 +194,8 @@
             </div>
             <button class="close-popup">&times;</button>
         </div>
+        <!-- tải ảnh về -->
+        <a id="downloadLink" style="display: none;"></a>
     </div>
 
     <!-- footer -->
@@ -202,6 +205,7 @@
     <script src="../asset/javaScript/click-picture.js"></script>
     <script src="../asset/javaScript/search.js"></script>
     <script src="../asset/javaScript/handle-categories.js"></script>
+    <script src="../asset/javaScript/download-pic.js"></script>
 </body>
 
 </html>

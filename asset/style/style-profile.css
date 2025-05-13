@@ -3,22 +3,6 @@
   height: 100vh;
   background-color: #ffffff;
 }
-
-:root {
-  --main-color: #063526;
-  --accent-color: #a9dcc9;
-  --bg-color: #f4f4f4;
-  --text-color: #333;
-  --font: "Montserrat Alternates", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: var(--font);
-  margin: 0;
-  padding: 0;
-}
-
 .main-profile {
   display: flex;
   height: calc(100vh - 5rem);
@@ -26,19 +10,21 @@
 
 .menu {
   width: 10vw;
-  border-right: 1px solid var(--main-color);
+  border-right: 1px solid var(--maincolorbold);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 1rem;
 }
-
+p {
+  font-weight: bold;
+}
 .content-profile {
   flex: 1;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .personal-infor {
@@ -57,8 +43,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: beige;
-  /* overflow: hidden; Giúp ảnh bo tròn không bị tràn ra ngoài */
+  overflow: hidden; /* Giúp ảnh bo tròn không bị tràn ra ngoài */
   margin-bottom: 1rem;
   border: 2px solid #ccc;
 }
@@ -82,7 +67,7 @@
 .infor h1 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  font-style: var(--main-color);
+  font-style: var(--maincolorbold);
   font-weight: bolder;
 }
 .describe {
@@ -92,18 +77,6 @@
   margin-top: 0.5rem;
   padding: 0.5rem;
   border-radius: 10px;
-}
-
-.other-option-button {
-  width: 200px;
-  height: 50px;
-  border-radius: 12px;
-  border: none;
-  background-color: var(--accent-color);
-  color: #063526;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .other-option {
@@ -119,7 +92,7 @@
 
 .section {
   background-color: #f9f9f9;
-  border-left: 4px solid var(--main-color);
+  border-left: 4px solid var(--maincolorbold);
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -136,16 +109,14 @@
   padding: 10px;
 }
 #settingsBtn:hover {
+  transition: 0.3;
   border-radius: 50%;
-  border: 1px solid green;
   padding: 10px;
 }
 #settingsMenu {
   position: absolute;
   bottom: 60px;
   left: 150px;
-  background-color: white;
-  border: 1px solid green;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
