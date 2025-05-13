@@ -24,7 +24,7 @@
             $save_path = $upload_dir . basename($file_name);
 
             // 4. Đường dẫn WEB để lưu vào CSDL
-            $web_path = "/PycShare/uploads/" . basename($file_name);
+            $web_path = "uploads/" . basename($file_name);
 
             // 5. Di chuyển file
             if (move_uploaded_file($file_tmp, $save_path)) {
