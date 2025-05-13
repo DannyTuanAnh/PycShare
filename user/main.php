@@ -161,7 +161,7 @@
             <div class="popup-right">
                 <div class="image-actions">
                     <span class="action like">
-                        <i class="fa-regular fa-heart" data-id=""></i>
+                        <i class="fa-regular fa-heart popup-heart" data-id=""></i>
                         <span class="count"></span>
                     </span>
                     <span class="action download">
@@ -188,6 +188,8 @@
             </div>
             <button class="close-popup">&times;</button>
         </div>
+        <!-- tải ảnh về -->
+        <a id="downloadLink" style="display: none;"></a>
     </div>
 
     <!-- footer -->
@@ -198,6 +200,7 @@
     <script src="../asset/javaScript/click-picture.js"></script>
     <script src="../asset/javaScript/search.js"></script>
     <script src="../asset/javaScript/handle-categories.js"></script>
+    <script src="../asset/javaScript/download-pic.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <!-- <script>
     $(document).ready(function() {
