@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost:3307
--- Thời gian đã tạo: Th5 12, 2025 lúc 05:48 PM
+-- Máy chủ: 127.0.0.1:3307
+-- Thời gian đã tạo: Th5 13, 2025 lúc 05:56 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -61,7 +61,7 @@ INSERT INTO `upload_picture` (`idPic`, `TenPic`, `filePic`, `idUser`, `NgayCapNh
 (22, 'anime', 'uploads/9c12920d2a09f691f37cbd5b6ed85fcd.jpg', 27, '2025-05-11', 0, 'avatar anime', '', 0),
 (24, 'cầu thủ', 'uploads/Doan-Van-Hau.jpg', 27, '2025-05-11', 0, 'cầu thủ việt nam', '', 0),
 (25, 'cầu thủ', 'uploads/anh-man-hinh-2024-12-06-luc-114001-17334600114702000390069.webp', 27, '2025-05-11', 0, 'cầu thủ Quang Hải', '', 0),
-(26, 'cầu thủ', 'uploads/Leo_Messi_(cropped).jpg', 27, '2025-05-11', 0, 'cầu thủ Leo Messi', '', 0),
+(26, 'cầu thủ', 'uploads/Leo_Messi_(cropped).jpg', 27, '2025-05-11', 141, 'cầu thủ Leo Messi', '', 0),
 (27, 'cầu thủ', 'uploads/jude-bellingham-17169861737831128245797.webp', 27, '2025-05-11', 0, 'cầu thủ Bellingham', '', 0),
 (28, 'cầu thủ', 'uploads/screen-shot-2024-12-23-at-105358-am-1734927063507707297952.webp', 27, '2025-05-11', 0, 'cầu thủ Mbappe', '', 0),
 (29, 'cầu thủ', 'uploads/7b5ae019cb0cdc2b697794dd2947f10b.jpg', 27, '2025-05-11', 0, 'cầu thủ Yamal', '', 0),
