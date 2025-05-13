@@ -161,8 +161,8 @@
             <div class="popup-right">
                 <div class="image-actions">
                     <span class="action like">
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="count">140</span>
+                        <i class="fa-regular fa-heart" data-id=""></i>
+                        <span class="count"></span>
                     </span>
                     <span class="action download">
                         <i class="fa-solid fa-download"></i>

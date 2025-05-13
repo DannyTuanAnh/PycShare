@@ -4,7 +4,7 @@
 
     if (isset($_GET['id'])) {
         $id = intval($_GET['id']);
-        $stmt = $server->prepare("select TenPic, user, NgayCapNhat, MoTa  from upload_picture INNER JOIN user ON upload_picture.idUser = user.id WHERE idPic = ?");
+        $stmt = $server->prepare("select LuotTym, TenPic, user, NgayCapNhat, MoTa  from upload_picture INNER JOIN user ON upload_picture.idUser = user.id WHERE idPic = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
