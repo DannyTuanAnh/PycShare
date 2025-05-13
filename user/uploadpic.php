@@ -8,9 +8,9 @@
 ?>
 
 <?php
-    if(isset($_SESSION['error'])) {
-        echo "<script>document.addEventListener('DOMContentLoaded', function() { showSuccess('" . $_SESSION['error'] . "'); });</script>";
-        unset($_SESSION['error']);
+    if(isset($_SESSION['errorPic'])) {
+        echo "<script>document.addEventListener('DOMContentLoaded', function() { showToast('" . $_SESSION['error'] . "'); });</script>";
+        unset($_SESSION['errorPic']);
     }
     if(isset($_SESSION['access'])) {
         echo "<script>document.addEventListener('DOMContentLoaded', function() { showSuccess('" . $_SESSION['access'] . "'); });</script>";
@@ -170,7 +170,8 @@
     <script src="../asset/javaScript/common.js"></script>
     <script src="../asset/javaScript/uploadPicture.js"></script>
     <script src="../asset/javaScript/search.js"></script>
-    <!-- <script src="../asset/javaScript/login_signup.js"></script> -->
+    <script src="../asset/javaScript/login_signup.js"></script>
+
 </body>
 
 </html>

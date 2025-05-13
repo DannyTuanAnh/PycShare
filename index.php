@@ -67,7 +67,7 @@
             $table = @mysqli_query($server, "select * from upload_picture") or die ("Không thể truy vấn dữ liệu");
             while($row = mysqli_fetch_array($table)) {
                 echo "<div class='gallery'>";
-                echo "<img src='".$row['filePic']."' alt='". $row['TenPic']."' data-id='" . $row['idPic'] ."' class='gallery-img' />";
+                echo "<img src='./user/".$row['filePic']."' alt='". $row['TenPic']."' data-id='" . $row['idPic'] ."' class='gallery-img' />";
                 echo "</div>";
             }
         ?>
@@ -103,6 +103,8 @@
     <script src="./asset/javaScript/common.js"></script>
     <script src="./asset/javaScript/jquery.min.js"></script>
     <script src="./asset/javaScript/click-picture.js"></script>
+    <script src="./asset/javaScript/handle-categories.js"></script>
+    <script src="./asset/javaScript/search.js"></script>
 </body>
 
 </html>

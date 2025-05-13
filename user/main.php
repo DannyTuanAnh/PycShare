@@ -1,10 +1,11 @@
 <?php
     session_start();
     if(!isset($_SESSION['username'])) {
-        header("Location: /PycShare/user/Login_Signup/login.php");
+        header("Location: ./Login_Signup/login.php");
         exit();
     }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -66,15 +67,6 @@
             <a href="./uploadpic.php" class="navbar-button">
                 <img src="../asset/img/create.svg" alt="create" id="create" width="30px" height="30px" />
                 <span class="tooltip">Đăng tải</span>
-            </a>
-
-            <!-- nút blog -->
-            <a href="#" class="navbar-button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 512 512" id="blog">
-                    <path fill="#ffffff"
-                        d="M168 80c-13.3 0-24 10.7-24 24l0 304c0 8.4-1.4 16.5-4.1 24L440 432c13.3 0 24-10.7 24-24l0-304c0-13.3-10.7-24-24-24L168 80zM72 480c-39.8 0-72-32.2-72-72L0 112C0 98.7 10.7 88 24 88s24 10.7 24 24l0 296c0 13.3 10.7 24 24 24s24-10.7 24-24l0-304c0-39.8 32.2-72 72-72l272 0c39.8 0 72 32.2 72 72l0 304c0 39.8-32.2 72-72 72L72 480zM176 136c0-13.3 10.7-24 24-24l96 0c13.3 0 24 10.7 24 24l0 80c0 13.3-10.7 24-24 24l-96 0c-13.3 0-24-10.7-24-24l0-80zm200-24l32 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-32 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80l32 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-32 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zM200 272l208 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-208 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80l208 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-208 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
-                </svg>
-                <span class="tooltip">Blog</span>
             </a>
             <!-- nút chuông thông báo -->
             <button class="navbar-button" id="notificationButton">
@@ -144,7 +136,7 @@
             $table = @mysqli_query($server, "SELECT * from upload_picture") or die ("Không thể truy vấn dữ liệu");
             while($row = mysqli_fetch_array($table)) {
                 echo "<div class='gallery'>";
-                echo "<img src='".$row['filePic']."' alt='" . $row['TenPic'] . "'data-id='" . $row['idPic'] ."' class='gallery-img' />";//chỉnh
+                echo "<img src='./".$row['filePic']."' alt='" . $row['TenPic'] . "'data-id='" . $row['idPic'] ."' class='gallery-img' />";//chỉnh
                 echo "</div>";
             }
         ?>
@@ -160,8 +152,8 @@
             <div class="popup-right">
                 <div class="image-actions">
                     <span class="action like">
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="count">140</span>
+                        <i class="fa-regular fa-heart popup-heart" data-id=""></i>
+                        <span class="count"></span>
                     </span>
                     <span class="action download">
                         <i class="fa-solid fa-download"></i>
@@ -171,11 +163,13 @@
                     </span>
                 </div>
                 <div class="popup-info">
-                    <h2 class="popup-title">Tiêu đề ảnh:
+                    <h2 class="popup-title">
                     </h2>
-                    <p class="popup-author">Tên tác giả</p>
-                    <p class="popup-date">Ngày đăng tải</p>
-                    <p class="popup-desc">Mô tả của tác giả</p>
+                    <a href="main.php?author=">
+                        <p class="popup-author"></p>
+                    </a>
+                    <p class="popup-date"></p>
+                    <p class="popup-desc"></p>
                 </div>
                 <div class="popup-comments">
                     <p class="popup-comments-count">6 nhận xét</p>
