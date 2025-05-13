@@ -215,7 +215,9 @@ i:hover {
   background-color: #ffffff20;
   padding: 0.625rem;
 }
-
+.auth-buttons {
+  font-family: var(--fontfamily);
+}
 .hasaccount a {
   color: var(--maincolorlight);
 }

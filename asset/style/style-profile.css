@@ -18,6 +18,7 @@
 }
 p {
   font-weight: bold;
+  font-family: var(--fontfamily);
 }
 .content-profile {
   flex: 1;
@@ -67,7 +68,7 @@ p {
 .infor h1 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  font-style: var(--maincolorbold);
+  font-family: var(--fontfamily);
   font-weight: bolder;
 }
 .describe {
@@ -114,6 +115,7 @@ p {
   padding: 10px;
 }
 #settingsMenu {
+  font-family: var(--fontfamily);
   position: absolute;
   bottom: 60px;
   left: 150px;

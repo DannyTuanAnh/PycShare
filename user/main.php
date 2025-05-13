@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../asset/style/reset.css" />
     <link rel="stylesheet" href="../asset/style/style.css" />
+    <link rel="stylesheet" href="../asset/responsive/main_res.css" />
     <link rel="stylesheet" href="../asset/style/style-main-click-picture.css" />
 
 
@@ -165,9 +166,7 @@
                 <div class="popup-info">
                     <h2 class="popup-title">
                     </h2>
-                    <a href="main.php?author=">
-                        <p class="popup-author"></p>
-                    </a>
+                    <p class="popup-author"></p>
                     <p class="popup-date"></p>
                     <p class="popup-desc"></p>
                 </div>

@@ -1,19 +1,23 @@
+/* FORM CHÍNH */
 .container-form-upload-picture {
   background-color: #074e0769;
-  border: solid 1px rgb(26, 81, 15);
   padding: 20px;
   width: 40%;
-  height: 500px;
+  height: 550px;
   margin: 0 auto;
   border-radius: 8px;
   border: none;
 }
+
 .form-upload-picture {
   display: flex;
+  justify-content: space-between;
 }
+
 .left {
   width: 50%;
 }
+
 .upload {
   height: 300px;
   display: flex;
@@ -24,16 +28,43 @@
   margin: 20px;
   border-radius: 10px;
 }
+
+.right {
+  margin: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 50%;
+}
+
 .right input {
   font-family: var(--fontfamily);
   font-size: 1rem;
   padding: 10px;
   color: black;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.right input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(31, 101, 33, 0.3);
+}
+
+.right p {
+  font-weight: bold;
 }
 
 #imageInput {
-  display: none; /* Ẩn input file */
+  display: none;
 }
+
 .upload .btn-upload {
   border-radius: 50%;
   border: none;
@@ -46,11 +77,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .upload p {
   color: white;
   padding: 15px;
   text-align: center;
 }
+
 .upload-button {
   display: flex;
   justify-content: center;
@@ -65,35 +98,16 @@
   cursor: pointer;
   font-size: 1rem;
 }
-.right {
-  margin: 20px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-}
-.right input {
-  border-radius: 5px;
-  margin-bottom: 30px;
-  border: none;
-  width: 300px;
-  height: 500px;
-}
+
 .right #upload-descript {
   height: 80px;
 }
+
 .right #upload-title,
 #upload-link {
   height: 30px;
 }
-.right input:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(31, 101, 33, 0.3);
-}
-.right p {
-  font-weight: bold;
-}
+
 h1 {
   font-family: var(--fontfamily);
   color: var(--maincolorbold);
@@ -102,7 +116,7 @@ h1 {
   margin-top: 20px;
   text-align: center;
 }
-/* Khi đang ở trang đó */
+
 .navbar-button.active {
   background-color: #1f6521;
   opacity: 0.8;

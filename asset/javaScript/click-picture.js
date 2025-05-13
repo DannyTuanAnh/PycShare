@@ -19,7 +19,9 @@ $(document).ready(function () {
       dataType: "json",
       success: function (data) {
         $(".popup-title").text("Tiêu đề ảnh: " + data.TenPic);
-        $(".popup-author").text("Tên tác giả: " + data.user);
+        $(".popup-author").html(
+          "Tên tác giả: <a href = '#'>" + data.user + "</a>"
+        );
         $(".popup-date").text("Ngày đăng tải: " + data.NgayCapNhat);
         $(".popup-desc").text("Mô tả của tác giả: " + data.MoTa);
 

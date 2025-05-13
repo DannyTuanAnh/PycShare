@@ -75,8 +75,15 @@
 .popup-info h2 {
   font-size: 1.5rem;
   font-weight: bold;
+  font-family: var(--fontfamily);
+  margin-bottom: 5px;
 }
-
+.popup-info p,
+.popup-comments p {
+  padding: 3px;
+  font-size: 1rem;
+  font-family: var(--fontfamily);
+}
 .popup-comments input {
   width: 100%;
   padding: 10px;
@@ -108,4 +115,8 @@
 
 .fa-heart.liked {
   color: red; /* Đổi màu trái tim đã like */
+}
+a {
+  text-decoration: none;
+  color: grey;
 }

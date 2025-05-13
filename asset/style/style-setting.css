@@ -1,83 +1,77 @@
 /* Phong cách chung cho phần nội dung cài đặt */
 #settingContent {
-    background-color: #ffffff;
-    padding: 30px;
-    margin: 20px auto;
-    border-radius: 12px;
-    max-width: 700px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: "Montserrat Alternates", sans-serif;
-  }
-  
-  #settingContent h2 {
-    color: #063526;
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: 700;
-    text-align: center;
-  }
-  
-  #settingContent p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-  
-  #settingContent form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color: #063526;
-  }
-  
-  #settingContent input,
-  #settingContent textarea,
-  #settingContent select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-  }
-  
-  #settingContent button {
-    background-color: #063526;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #settingContent button:hover {
-    background-color: #105e3c;
-  }
-  
-  .backBtn {
-    margin-top: 30px;
-    display: inline-block;
-    background-color: #ccc;
-    color: #000;
-  }
-  
-  .backBtn:hover {
-    background-color: #bbb;
-  }
-  
-  /* Danh sách ul trong policy */
-  #settingContent ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
-  
-  #settingContent ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-  } 
-  
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+#settingContent h2 {
+  color: #063526;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#settingContent p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#settingContent form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #063526;
+}
+
+#settingContent input,
+#settingContent textarea,
+#settingContent select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+#settingContent button {
+  background-color: #063526;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#settingContent button:hover {
+  background-color: #105e3c;
+}
+.backBtn {
+  margin-top: 30px;
+  display: inline-block;
+  background-color: #ccc;
+  color: #000;
+}
+.backBtn:hover {
+  background-color: #bbb;
+}
+
+#settingContent ul {
+  font-family: var(--fontfamily);
+  padding-left: 20px;
+}
+
+#settingContent ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}

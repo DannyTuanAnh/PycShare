@@ -18,6 +18,7 @@ include "handle_login.php";
     <link rel="stylesheet" href="../../asset/style/reset.css" />
     <link rel="stylesheet" href="../../asset/style/style.css" />
     <link rel="stylesheet" href="../../asset/style/style-login-sign.css" />
+    <link rel="stylesheet" href="../../asset/responsive/login_signUp_res.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body class="container-login-signup">

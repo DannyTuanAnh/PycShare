@@ -27,8 +27,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../asset/style/reset.css" />
     <link rel="stylesheet" href="../../asset/style/style.css" />
+    <link rel="stylesheet" href="../../asset/responsive/profile_res.css" />
     <link rel="stylesheet" href="../../asset/style/style-profile.css" />
     <link rel="stylesheet" href="../../asset/style/style-setting.css" />
+
     <script type="text/javascript" src="../../asset/javaScript/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,7 +48,7 @@
         <header class="header">
             <!-- logo -->
             <div class="logo">
-                <img src="../../asset/img/Logo.svg" alt="Pycshare" />
+                <a href="../main.php"><img src="../../asset/img/Logo.svg" alt="Pycshare" /></a>
             </div>
             <!-- thanh tìm kiếm -->
             <div class="search-wrapper">

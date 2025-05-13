@@ -1,0 +1,109 @@
+/* Tablet và nhỏ hơn */
+@media (max-width: 1024px) {
+  .main-profile {
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+    height: auto;
+    border-right: none !important; /* Xóa border phải */
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .content-profile {
+    padding: 1.5rem;
+  }
+
+  .infor {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .personal-infor {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .describe {
+    height: auto;
+    width: 100%;
+  }
+
+  #settingsBtn {
+    left: 10px;
+    bottom: 20px;
+  }
+
+  #settingsMenu {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .avatar-personal {
+    width: 130px;
+    height: 130px;
+  }
+
+  .btn-custom {
+    width: 90%;
+    font-size: 0.8rem;
+    height: 2rem;
+  }
+
+  .infor h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .describe {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    height: auto;
+  }
+
+  .other-option {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .section {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    width: 100%;
+  }
+
+  .content-profile {
+    padding: 1rem;
+  }
+
+  .slider {
+    width: 30px;
+    height: 18px;
+  }
+
+  .slider:before {
+    width: 12px;
+    height: 12px;
+    left: 3px;
+    bottom: 3px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(12px);
+  }
+
+  .tooltip-setting {
+    left: auto;
+    right: 0;
+    bottom: -20%;
+    font-size: 0.8rem;
+  }
+}

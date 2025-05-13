@@ -38,12 +38,11 @@
         $table = @mysqli_query($server,"select * from upload_picture where idUser = ".$idUser) or die ("Không thể truy vấn dữ liệu");
         while($row = mysqli_fetch_array($table)) {
             echo "<div class='gallery' >";
-            echo "<img src='../".$row['filePic']."' alt='natural' data-id='" . $row['idPic'] ."' class='gallery-img'  />";
+            echo "<img src='../".$row['filePic']."' alt='" . $row['TenPic'] . "'data-id='" . $row['idPic'] ."' class='gallery-img'  />";
             echo "</div>";
         }
         ?>
     </main>
-
     <!-- Popup xem ảnh chi tiết -->
     <div class="image-popup-overlay" style="display: none;"></div>
     <div class="image-popup" style="display: none;">
@@ -54,8 +53,8 @@
             <div class="popup-right">
                 <div class="image-actions">
                     <span class="action like">
-                        <i class="fa-regular fa-heart"></i>
-                        <span class="count">140</span>
+                        <i class="fa-regular fa-heart popup-heart" data-id=""></i>
+                        <span class="count"></span>
                     </span>
                     <span class="action download">
                         <i class="fa-solid fa-download"></i>
@@ -78,12 +77,15 @@
                 </div>
             </div>
             <button class="close-popup">&times;</button>
+            <!-- tải ảnh về -->
+            <a id="downloadLink" style="display: none;"></a>
         </div>
     </div>
     <script src="../../asset/javaScript/jquery.min.js"></script>
     <script src="../../asset/javaScript/common.js"></script>
     <script src="../../asset/javaScript/click-picture.js"></script>
     <script src="../../asset/javaScript/search.js"></script>
+    <script src="../../asset/javaScript/download-pic.js"></script>
 
 </body>
 

@@ -1,0 +1,23 @@
+/* Tablet (dưới 1024px) */
+@media (max-width: 1024px) {
+  .main-content {
+    column-count: 3;
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile lớn (dưới 768px) */
+@media (max-width: 768px) {
+  .main-content {
+    column-count: 2;
+    padding: 0 0.75rem;
+  }
+}
+
+/* Mobile nhỏ (dưới 480px) */
+@media (max-width: 480px) {
+  .main-content {
+    column-count: 1;
+    padding: 0 0.5rem;
+  }
+}
