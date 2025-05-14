@@ -21,7 +21,7 @@
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class="saved-image">';
-            echo '<img src="uploads/' . $row['imagePath'] . '" alt="Ảnh đã lưu" width="200">';
+            echo '<img src="../uploads/' . $row['imagePath'] . '" alt="Ảnh đã lưu" width="200">';
             echo '</div>';
         }
     } else {
