@@ -5,6 +5,7 @@ include "handle_login.php";
 <!-- HTML -->
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +13,10 @@ include "handle_login.php";
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat+Alternates:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Sora:wght@400;700&display=swap" rel="stylesheet" />
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat+Alternates:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Sora:wght@400;700&display=swap"
+        rel="stylesheet" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="../../asset/style/reset.css" />
     <link rel="stylesheet" href="../../asset/style/style.css" />
@@ -21,11 +24,12 @@ include "handle_login.php";
     <link rel="stylesheet" href="../../asset/responsive/login_signUp_res.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body class="container-login-signup">
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <a href="../index.php"><img src="../../asset/img/Logo.svg" alt="Pycshare" /></a>
+            <a href="../../index.php"><img src="../../asset/img/Logo.svg" alt="Pycshare" /></a>
         </div>
     </header>
 
@@ -60,4 +64,5 @@ include "handle_login.php";
     <script src="../../asset/javaScript/jquery.min.js"></script>
     <script src="../../asset/javaScript/login_signup.js"></script>
 </body>
+
 </html>
