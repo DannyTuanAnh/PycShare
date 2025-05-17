@@ -55,9 +55,9 @@ $(document).ready(function () {
     $(".image-popup, .image-popup-overlay").fadeOut();
     location.reload();
   });
-});
+  // });
 
-$(document).ready(function () {
+  // $(document).ready(function () {
   $(".popup-heart").click(function () {
     const icon = $(this);
     const imgID = $(".popup-img").data("id");
